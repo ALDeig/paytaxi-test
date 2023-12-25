@@ -31,13 +31,7 @@ class EmployeeDataPrepare(ABC):
 
 class YandexEmployeePrepare(EmployeeDataPrepare):
     def prepare_data_for_add(self) -> EmployeeData:
-        return EmployeeData(
-            **self._raw_data.model_dump(
-                exclude={
-                    "id",
-                }
-            )
-        )
+        return EmployeeData(**self._raw_data.model_dump(exclude={"id",}))
 
     def prepare_data_for_update(self, current_data: MEmployee) -> dict:
         update_data = {}

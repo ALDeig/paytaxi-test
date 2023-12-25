@@ -14,7 +14,10 @@ from paytaxi_test.src.services.employee.prepare_data import (
 )
 
 
-app = FastAPI()
+app = FastAPI(
+    title="PayTaxi",
+    version="0.1.0",
+)
 
 
 @app.post("/yandex/employee")
@@ -34,6 +37,6 @@ async def create_or_update_mobile_employee(employee: SEmployee) -> SEmployeeResp
     return await save_employee_data(employee, MobilAppEmployeePrepare)
 
 
-@app.post("/ohter/employee")
+@app.post("/other/employee")
 async def create_or_update_ohter_employee(employee: SEmployee) -> SEmployeeResponse:
     return await save_employee_data(employee, OtherEmployeePrepare)

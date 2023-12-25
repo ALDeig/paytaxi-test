@@ -14,7 +14,6 @@ async def save_employee_data(
         result = await _create_employee(creator)
     else:
         result = await _update_employee(employee.id, creator)
-    print(f"Model = {result.phone}")
     return SEmployeeResponse.model_validate(result)
 
 

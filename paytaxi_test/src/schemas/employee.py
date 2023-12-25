@@ -36,5 +36,4 @@ class SEmployeeResponse(BaseModel):
     @field_validator("phone", mode="before")
     @classmethod
     def get_phones(cls, phones):
-        print(f"Schema = {phones}")
         return [phone.phone for phone in phones]
