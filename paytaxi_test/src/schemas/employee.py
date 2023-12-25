@@ -19,7 +19,7 @@ class SEmployeeCityMobil(SEmployee):
     @field_validator("status")
     @classmethod
     def status_validate(cls, v: Status) -> Status:
-        return Status.work if v == 1 else Status.dismissed
+        return Status.work if v == Status.dismissed else Status.dismissed
 
 
 class SEmployeeResponse(BaseModel):

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Тест",
+        "last_name": "ТестТест",
+        "patronymic": "ТестТестТест",
+        "status": "work",
+        "category": "driver"
+    },
+    {
+        "name": "Тест2",
+        "last_name": "ТестТест2",
+        "patronymic": "ТестТестТест2",
+        "status": "dismissed",
+        "category": "courier",
+        "document": "NDFDGD34"
+    }
+]
