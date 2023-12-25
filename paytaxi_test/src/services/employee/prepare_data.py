@@ -52,7 +52,7 @@ class CityMobilEmployeePrepare(EmployeeDataPrepare):
     def prepare_data_for_update(self, current_data: MEmployee) -> dict:
         update_data = {}
         if self._raw_data.phone[0] not in current_data.phone:
-            update_data["phone"] = self._raw_data.phone[0]
+            update_data["phone"] = self._raw_data.phone
         if current_data.status != self._raw_data.status:
             update_data["status"] = self._raw_data.status
         return update_data
